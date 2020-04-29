@@ -3,7 +3,7 @@ package com.example.Bookstore.domain;
 import javax.persistence.*;
 
 @Entity
-public class User {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class User {
     @Column(name = "role", nullable = false)
     private String role;
     
-    public User() {
+    public Person() {
     }
 
-	public User(String username, String passwordHash, String email, String role) {
+	public Person(String username, String passwordHash, String email, String role) {
 		super();
 		this.username = username;
 		this.passwordHash = passwordHash;
